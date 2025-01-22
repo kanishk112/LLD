@@ -14,13 +14,13 @@ public class ElevatorController {
     }
 
     public void requestElevator(int sourceFloor, int destinationFloor) {
-        Elevator elevator = findElevator(sourceFloor, destinationFloor);
+        Elevator elevator = findElevator(destinationFloor);
         if (elevator != null) {
             elevator.addRequest(new Request(sourceFloor, destinationFloor));
         }
     }
 
-    private Elevator findElevator(int sourceFloor, int destinationFloor) {
+    private Elevator findElevator(int destinationFloor) {
         Elevator selectedElevator = null;
         int minDistance = Integer.MAX_VALUE;
         for (Elevator elevator : elevators) {

@@ -4,7 +4,7 @@
  */
 
 
-class Request {
+public class Request {
     private final int sourceFloor;
     private final int destinationFloor;
 
